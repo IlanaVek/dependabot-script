@@ -140,6 +140,8 @@ commit = fetcher.commit
 # Parse the dependency files #
 ##############################
 puts "Parsing dependencies information"
+puts " user is ENV["GITHUB_ENTERPRISE_ACCESS_USER"] "
+puts caller
 parser = Dependabot::FileParsers.for_package_manager(package_manager).new(
   dependency_files: files,
   source: source,
