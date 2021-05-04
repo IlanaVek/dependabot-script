@@ -49,7 +49,7 @@ if ENV["GITHUB_ENTERPRISE_ACCESS_TOKEN"]
   credentials << {
     "type" => "git_source",
     "host" => ENV["GITHUB_ENTERPRISE_HOSTNAME"], # E.g., "ghe.mydomain.com",
-    "username" => "x-access-token",
+    "username" => ENV["GITHUB_ENTERPRISE_ACCESS_USER"],
     "password" => ENV["GITHUB_ENTERPRISE_ACCESS_TOKEN"] # A GHE access token with API permission
   }
 
